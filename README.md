@@ -45,7 +45,7 @@ Suppose we want to generate 1,000 rows of test data with the following structure
 - ```hdate``` (hire date) a random date after 01 Jan 2001
 - ```salary``` value between 10,000 and 19,000
 
-We can use ROWGEN and Vertica's ARRAY data type to write something like this:
+We can use ROWGEN and Vertica's ARRAY data type and write something like this:
 ```sql
 SELECT 
     (ARRAY['Ann','Elyzabeth','Lucy','John','Ellen','Robert','Andrew','Mary','Matt'])
@@ -56,7 +56,7 @@ SELECT
     '2001-01-01'::DATE + RANDOMINT(365*10) AS hire_date,
     (10000 + RANDOM()*9000)::NUMERIC(7,2) AS salary
 FROM
-    ( SELECT ROWGEN(1,000) OVER() ) x;
+    ( SELECT ROWGEN(1000) OVER() ) x;
    fname   |  lname  | depid | hire_date  |  salary  
 -----------+---------+-------+------------+----------
  Mary      | Clark   |   200 | 2003-05-08 | 12512.02
