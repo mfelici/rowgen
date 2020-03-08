@@ -48,8 +48,10 @@ Suppose we want to generate 1,000 rows of test data with the following structure
 We can use ROWGEN and Vertica's ARRAY data type to write something like this:
 ```sql
 SELECT 
-    (ARRAY['Ann','Elyzabeth','Lucy','John','Ellen','Robert','Andrew','Mary','Matt'])[RANDOMINT(9)]::VARCHAR AS fname,
-    (ARRAY['Gates','Lee','Ellison','Ross','Smith','Davis','Kennedy','Clark','Moore','Taylor'])[RANDOMINT(10)]::VARCHAR AS lname,
+    (ARRAY['Ann','Elyzabeth','Lucy','John','Ellen','Robert','Andrew','Mary','Matt'])
+        [RANDOMINT(9)]::VARCHAR AS fname,
+    (ARRAY['Gates','Lee','Ellison','Ross','Smith','Davis','Kennedy','Clark','Moore','Taylor'])
+        [RANDOMINT(10)]::VARCHAR AS lname,
     ( RANDOMINT(3) + 1 ) * 100 AS depid,
     '2001-01-01'::DATE + RANDOMINT(365*10) AS hire_date,
     (10000 + RANDOM()*9000)::NUMERIC(7,2) AS salary
