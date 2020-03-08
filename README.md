@@ -83,6 +83,6 @@ FROM
 ## How to install ROWGEN()
 - First step is to compile the source code: ```make```
 - Then - as dbadmin - deploy the code in Vertica: ```make deploy```
-- You can run ```make test``` tocheck everything is ok
+- You can run ```make test``` to check everything is ok
 
 Please have a look to the Makefile before running ```make``` and change it if needed.
