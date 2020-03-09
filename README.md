@@ -48,7 +48,7 @@ Suppose we want to generate 1,000 rows of test data with the following structure
 We can use ROWGEN and Vertica's ARRAY data type and write something like this:
 ```sql
 SELECT 
-    (ARRAY['Ann','Elyzabeth','Lucy','John','Ellen','Robert','Andrew','Mary','Matt'])
+    (ARRAY['Ann','Elizabeth','Lucy','John','Ellen','Robert','Andrew','Mary','Matt'])
         [RANDOMINT(9)]::VARCHAR AS fname,
     (ARRAY['Gates','Lee','Ellison','Ross','Smith','Davis','Kennedy','Clark','Moore','Taylor'])
         [RANDOMINT(10)]::VARCHAR AS lname,
@@ -67,7 +67,7 @@ FROM
  John      | Davis   |   100 | 2003-09-05 | 10777.43
  Robert    | Smith   |   200 | 2004-03-02 | 12434.80
  John      | Moore   |   100 | 2007-10-07 | 14213.92
- Elyzabeth | Gates   |   200 | 2005-02-01 | 16685.84
+ Elizabeth | Gates   |   200 | 2005-02-01 | 16685.84
  Ann       | Davis   |   300 | 2003-08-18 | 16592.06
  Mary      | Gates   |   300 | 2007-12-07 | 16869.87
  Matt      | Ross    |   200 | 2004-08-28 | 12944.05
