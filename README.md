@@ -53,11 +53,11 @@ SELECT
     (ARRAY['Gates','Lee','Ellison','Ross','Smith','Davis','Kennedy','Clark','Moore','Taylor'])
         [RANDOMINT(10)]::VARCHAR AS lname,
     ( RANDOMINT(3) + 1 ) * 100 AS depid,
-    '2001-01-01'::DATE + RANDOMINT(365*10) AS hire_date,
+    '2001-01-01'::DATE + RANDOMINT(365*10) AS hdate,
     (10000 + RANDOM()*9000)::NUMERIC(7,2) AS salary
 FROM
     ( SELECT ROWGEN(1000) OVER() ) x;
-   fname   |  lname  | depid | hire_date  |  salary  
+   fname   |  lname  | depid |    hdate   |  salary  
 -----------+---------+-------+------------+----------
  Mary      | Clark   |   200 | 2003-05-08 | 12512.02
  Andrew    | Lee     |   300 | 2010-09-12 | 17046.66
