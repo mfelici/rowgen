@@ -37,7 +37,7 @@ FROM (
 ```
 will produce **exactly** the same sequence of rows from 1 to 10 as ```SELECT ROWGEN(10) OVER()``` but - frankly speaking - I found the second much easier to remember :-)
 
-## Sample data generation example.
+## Test data generation example.
 Suppose we want to generate 1,000 rows of test data with the following structure:
 - ```fnme``` (first name) using a random name from a given list
 - ```lname``` (last name) using a random name from a given list
