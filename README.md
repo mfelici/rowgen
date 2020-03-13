@@ -39,7 +39,7 @@ will produce **exactly** the same sequence of rows from 1 to 10 as ```SELECT ROW
 
 ## Test data generation example.
 Suppose we want to generate 1,000 rows of test data with the following structure:
-- ```fnme``` (first name) using a random name from a given list
+- ```fname``` (first name) using a random name from a given list
 - ```lname``` (last name) using a random name from a given list
 - ```depid```(department id) in [100,200,300]
 - ```hdate``` (hire date) a random date after 01 Jan 2001
