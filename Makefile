@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -O3 -D HAVE_LONG_INT_64 -Wall -std=c++11 -shared -Wno-unused-value -fPIC
+CXXFLAGS = -O3 -D HAVE_LONG_INT_64 -Wall -std=c++11 -shared -Wno-unused-value -fPIC -D_GLIBCXX_USE_CXX11_ABI=0
 INCPATH = -I/opt/vertica/sdk/include
 VERPATH = /opt/vertica/sdk/include/Vertica.cpp
 UDXLIBNAME = lrowgen
